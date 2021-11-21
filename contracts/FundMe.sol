@@ -6,11 +6,6 @@ import "@chainlink/contracts/src/v0.6/interfaces/AggregatorV3Interface.sol";
 import "@chainlink/contracts/src/v0.6/vendor/SafeMathChainlink.sol";
 
 
-// functions to implement
-// func fund()
-// func withDraw()
-// func checkFunds()
-// fund checkEntranceFee()
 contract FundMe {
     using SafeMathChainlink for uint256;
 
@@ -74,7 +69,9 @@ contract FundMe {
     }
 
     function getEntranceFee() public view returns (uint256) {
-        // Minimum amount in USD need to be eligible to Fund
+        // Returns the minimum amount in Eth needed to be eligible to Fund
+        // Returns in wei
+        
 
         uint256 minimumUsd = 50 * 10**18;
         uint256 price = getPrice();

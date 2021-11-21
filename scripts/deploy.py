@@ -6,7 +6,7 @@ from scripts.helpful_scripts import (
 )
 
 
-def deploy():
+def deploy_fund_me():
     """Deploys the contract to Local/Testnet"""
 
     if network.show_active() in LOCAL_BLOCKCHAIN_ENVIRONMENTS:
@@ -25,4 +25,4 @@ def deploy():
 
 
 def main():
-    deploy()
+    deploy_fund_me()
